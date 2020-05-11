@@ -1,5 +1,5 @@
 body{
-  background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)), url('https://saga.art.br/wp-content/uploads/2019/02/saga-geek-background-00-mobile.png');
+  background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0)), url('https://saga.art.br/wp-content/uploads/2019/02/saga-geek-background-00-mobile.png');
   background-size: 100% 1000%; /*largura e altura*/
   /*para tamanho poderiamos utilizar o vh q é o ViewportHeight e podemor usar para largura o vw, viewportWidth, ambos vão trabalhar com o tamanho da tela em uso.*/
 }
