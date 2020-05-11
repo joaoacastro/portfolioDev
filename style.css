@@ -1,36 +1,35 @@
 body{
-    background-image: url('https://saga.art.br/wp-content/uploads/2019/02/saga-geek-background-00-mobile.png');
-    background-size: 100% 1000%; /*largura e altura*/
-    /*para tamanho poderiamos utilizar o vh q é o ViewportHeight e podemor usar para largura o vw, viewportWidth, ambos vão trabalhar com o tamanho da tela em uso.*/
-  }
-  a{
-    text-decoration: none; /*tira o sublinhado que ja vem padrão*/
-    color: black;
-  }
-  a:hover{
-    color:teal;
-    text-decoration: underline;
-  }
-  .menu{
-    background-color: #E8D5ED;
-    font-style: italic;
-    list-style: square;
-    font-color: gray;
-  }
-  .menu li{
-    list-style: none; /*tira a bolinha da lista que ja vem padrão*/
-  }
-  .menu ul{
-    display: flex; /*coloca a lista tudo em uma linha*/
-    justify-content: space-around; /*coloca um espaçamento entre as listas, só funciona com o display:flex*/
-  }
-  .site-title,
-  .site-subtitle { /*usado para alterar mais de um grupo*/
-    color: white;
-    font-family: monospace;
-    text-align: center;
-  }
-  
-  .site-subtitle {
-    font-style: italic;
-  }
+  background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)), url('https://saga.art.br/wp-content/uploads/2019/02/saga-geek-background-00-mobile.png');
+  background-size: 100% 1000%; /*largura e altura*/
+  /*para tamanho poderiamos utilizar o vh q é o ViewportHeight e podemor usar para largura o vw, viewportWidth, ambos vão trabalhar com o tamanho da tela em uso.*/
+}
+a{
+  text-decoration: none; /*tira o sublinhado que ja vem padrão*/
+  color: black;
+}
+a:hover{
+  color:teal;
+  text-decoration: underline;
+}
+.menu{
+  background-color: #E8D5ED;
+  font-style: italic;
+  list-style: square;
+  color: gray;
+}
+.menu li{
+  list-style: none; /*tira a bolinha da lista que ja vem padrão*/
+}
+.menu ul{
+  display: flex; /*coloca a lista tudo em uma linha*/
+  justify-content: space-around; /*coloca um espaçamento entre as listas, só funciona com o display:flex*/
+}
+.site-title,
+.site-subtitle { /*usado para alterar mais de um grupo*/
+  color: white;
+  font-family: monospace;
+  text-align: center;
+}
+.site-subtitle {
+  font-style: italic;
+}
