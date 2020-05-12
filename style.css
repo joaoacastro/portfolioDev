@@ -1,26 +1,65 @@
+/*reset do css*/
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
 body{
   background-image: url('https://i.stack.imgur.com/spmUM.gif');
   background-size: auto 100vh; /*largura e altura*/
   /*para tamanho poderiamos utilizar o vh q é o ViewportHeight e podemor usar para largura o vw, viewportWidth, ambos vão trabalhar com o tamanho da tela em uso.*/
+  font-size: 10px;
 }
-.img-container{
+/*Se a tela tiver pelo menos 400px vai carregar estes estilos*/
+/*ou seja, apartir de 400px o site segue essa regra de estilo*/
+@media(min-width: 400px){/*os parenteses serve para colocar a condição do if dentro deles*/
+  body{
+    font-size: 14px;
+  }
+  .img-face{
+    height: 50%;
+    width: 50%;
+  }
+}
+/*breakpoint*/
+@media(min-width: 600px){
+  body{
+    font-size: 18px;
+  }
+  header{
+    height: 50vh;
+  }
+}
+header{
+  height: 100vh;
   display: flex;
   justify-content: center;
-}
-img{
-  border-radius: 80px;
-  filter: blur(2px);
-  height: 150px;
-}
-img:hover{
-  filter: none;
-  cursor: pointer;
+  align-items: center;
 }
 a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-face{
+  border-radius: 80px;
+  filter: blur(2px);
+  height: 30%;
+  width: 30%;
+}
+.img-face:hover{
+  filter: none;
+  cursor: pointer;
+  border-style: solid;
+  border-color: whitesmoke;
+}
+.menu a{
   text-decoration: none; /*tira o sublinhado que ja vem padrão*/
   color: rgb(255, 255, 255);
+  display: block;
+  padding: 20px 50px 20px;
 }
-a:hover{
+.menu a:hover{
   color:rgb(255, 238, 0);
   text-decoration: underline;
   font-style: italic;
@@ -30,6 +69,9 @@ a:hover{
   border-radius: 50px;
   background-image: linear-gradient( 80deg, rgba(255, 65, 100, 0.479), rgba(133, 133, 255, 0.5));
   color: whitesmoke;
+  position: fixed; /*fixar menu na pagina*/
+  width: 99vw;
+  top: 0;
 }
 .menu li{
   list-style: none; /*tira a bolinha da lista que ja vem padrão*/
