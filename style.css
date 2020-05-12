@@ -3,6 +3,19 @@ body{
   background-size: auto 100vh; /*largura e altura*/
   /*para tamanho poderiamos utilizar o vh q é o ViewportHeight e podemor usar para largura o vw, viewportWidth, ambos vão trabalhar com o tamanho da tela em uso.*/
 }
+.img-container{
+  display: flex;
+  justify-content: center;
+}
+img{
+  border-radius: 80px;
+  filter: blur(2px);
+  height: 150px;
+}
+img:hover{
+  filter: none;
+  cursor: pointer;
+}
 a{
   text-decoration: none; /*tira o sublinhado que ja vem padrão*/
   color: rgb(255, 255, 255);
