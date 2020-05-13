@@ -3,27 +3,58 @@
     <head> <!--config. principais da pagina-->
     <meta charset="UTF-8">
     <!--meta:vp -> torna o site resposivo-->
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Castro</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="logo/JC_png.png">
 </head>
 <body>
     <header> <!-- header: cabeçalho da página-->
-        <nav class="menu">
+        <nav>
             <ul>
+              <li><a href="#top">Home</a></li>
+              <li><a href="#portfolio">Portfólio</a></li>
               <li><a href="https://github.com/joaoacastro" target="_blank">GitHub</a></li>
               <li><a href="https://codepen.io/joaoacastro" target="_blank">CodePen</a></li>
               <li><a href="https://www.linkedin.com/in/joao-ac-castro/" target="_blank">LinkedIn</a></li>
             </ul>
-        </nav>
-        <div>
-          <h1 class="site-title">João Antônio de Castro</h1>
+      </nav>
+      <div class="titulo">
+          <h1 class="site-title" id="index">João Antônio de Castro</h1>
           <h3 class="site-subtitle">< Web Developer Jr. ></h3>
           <a href="http://instagram.com/jonnycastro" target="_blank" >
             <img class="img-face" src="imagem/foto.jpg"></svg>
           </a>
         </div>
     </header>
+    <section>
+        <h2 class="portfolio" id="portfolio">< Portfólio ></h2>
+        <br>
+        <div class="portfolio2"> 
+        <figure>
+          <a href="https://codepen.io/joaoacastro/pen/BaNgQbb?editors=0010" target="_blank">
+          <img class="img-portfolio" src="imagem/IMC.png" alt="eCommerce">
+          <figcaption>Calcular IMC</figcaption>
+        </figure></a>
+        <br>
+        <figure>
+          <a href="https://codepen.io/joaoacastro/pen/jObwPQm" target="_blank">
+          <img class="img-portfolio" src="imagem/squares.jpg" alt=">Mobile">
+          <figcaption>Color Squares</figcaption>
+        </figure></a>
+        </div>
+        <div class="portfolio3"> 
+        <figure>
+          <a href="https://codepen.io/joaoacastro/pen/gOaaOYr" target="_blank">
+          <img class="img-portfolio" src="imagem/sorteio.jpg" alt="Web design">
+          <figcaption>App de Sorteio</figcaption>
+        </figure></a>
+        <figure>
+          <a href="https://codepen.io/joaoacastro/pen/JjYYMrb" target="_blank">
+            <img class="img-portfolio" src="imagem/transporte.jfif" alt="Projetos pessoais">
+            <figcaption>App de Transporte</figcaption>
+          </figure></a>
+        </section>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
