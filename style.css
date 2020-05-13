@@ -1,15 +1,17 @@
 /*reset do css*/
 *{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 body{
   background-image: url('https://i.stack.imgur.com/spmUM.gif');
   background-size: auto 130vh; /*largura e altura*/
   background-repeat: no-repeat;
   background-color: black;/*linear-gradient( 0deg, rgba(0, 0, 0, 0), rgb(0, 0, 0));*/
-  /*para tamanho poderiamos utilizar o vh q é o ViewportHeight e podemor usar para largura o vw, viewportWidth, ambos vão trabalhar com o tamanho da tela em uso.*/}
+  /*para tamanho poderiamos utilizar o vh q é o ViewportHeight e podemor usar para largura o vw, viewportWidth, ambos vão trabalhar com o tamanho da tela em uso.*/
+}
 /*Se a tela tiver pelo menos 400px vai carregar estes estilos*/
 /*ou seja, apartir de 400px o site segue essa regra de estilo*/
 @media(min-width: 400px){/*os parenteses serve para colocar a condição do if dentro deles*/
@@ -34,18 +36,6 @@ header{
   align-items: center;
   flex-wrap: wrap;
 }
-section{
-  margin-top: 200px;
-}
-section a{
-  text-decoration: none;
-  font-family: sans-serif;
-  color: whitesmoke;
-  font-style: italic;
-}
-section a:hover{
-  color:gray;
-}
 .titulo a{
   display: flex;
   justify-content: center;
@@ -58,21 +48,10 @@ section a:hover{
   width: 30%;
 }
 .img-face:hover{
-  filter: none;
-  cursor: pointer;
-  border-style: solid;
   border-color: lightgray;
-}
-nav a{
-  color: rgb(255, 255, 255);
-  display: block;
-  padding: 10px;
-  text-decoration: none; /*tira o sublinhado que ja vem padrão*/
-}
-nav a:hover{
-  color:rgb(255, 238, 0);
-  text-decoration: underline;
-  font-style: italic;
+  border-style: solid;
+  cursor: pointer;
+  filter: none;
 }
 nav{
   border-bottom-left-radius: 50px;
@@ -82,6 +61,17 @@ nav{
   position: fixed; /*fixar menu na pagina*/
   top: 0;
   width: 100vw;
+}
+nav a{
+  color: rgb(255, 255, 255);
+  display: block;
+  padding: 10px;
+  text-decoration: none; /*tira o sublinhado que ja vem padrão*/
+}
+nav a:hover{
+  color:rgb(185, 185, 185);
+  text-decoration: underline;
+  font-style: italic;
 }
 nav li{
   list-style: none; /*tira a bolinha da lista que ja vem padrão*/
@@ -95,6 +85,7 @@ nav ul{
   color: lightgray;
   font-family: monospace;
   text-align: center;
+  line-height: 2em; /*espaçamento entre linhas*/
 }
 .site-subtitle {
   border-style: solid;
@@ -104,33 +95,60 @@ nav ul{
   border-right-style: none;
   font-style: italic;
 }
+.projetos{
+  margin-top: 150px;
+  font-family: 'Source Code Pro', monospace;
+  color: whitesmoke;
+  text-align: center;
+  height: 100vh;
+}
+.grid{
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+.projetos .grid{
+  display: grid;
+  gap: 1em;
+  grid-template-columns:150px;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+@media (min-width: 400px){
+  .projetos .grid{
+    grid-template-columns: repeat(2, 100px); /*fazer duas colunas de 100px*/
+    justify-content: space-around;
+  }
+}
+@media (min-width: 600px){
+  .projetos .grid{
+    grid-template-columns: repeat(3, 100px);
+    justify-content: space-around;
+  }
+}
 .img-portfolio{
-  height: 180px;
-  width: 180px;
-  border-radius: 30%;
-  margin: 30px;
+  height: 110px;
+  width: 130px;
+  border-radius: 40px;
+  object-fit: cover;
 }
 .img-portfolio:hover{
   border-style: solid;
-  border-color: lightgray;
-}
-.portfolio{
-  font-family: sans-serif;
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-.portfolio2{
-  display: flex;
-  justify-content: center;
-}
-.portfolio3{
-  display: flex;
-  justify-content: center;
+  border-color: white;
 }
 figcaption{
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 30px;
+}
+figure{
   display: flex;
-  justify-content: center;
+  text-align: center;
+}
+.grid a{
+  text-decoration: none;
 }
 /*rolagem suave com botão do menu*/
 html{
