@@ -9,8 +9,7 @@ body{
   background-size: auto 130vh; /*largura e altura*/
   background-repeat: no-repeat;
   background-color: black;/*linear-gradient( 0deg, rgba(0, 0, 0, 0), rgb(0, 0, 0));*/
-  /*para tamanho poderiamos utilizar o vh q é o ViewportHeight e podemor usar para largura o vw, viewportWidth, ambos vão trabalhar com o tamanho da tela em uso.*//
-}
+  /*para tamanho poderiamos utilizar o vh q é o ViewportHeight e podemor usar para largura o vw, viewportWidth, ambos vão trabalhar com o tamanho da tela em uso.*/}
 /*Se a tela tiver pelo menos 400px vai carregar estes estilos*/
 /*ou seja, apartir de 400px o site segue essa regra de estilo*/
 @media(min-width: 400px){/*os parenteses serve para colocar a condição do if dentro deles*/
