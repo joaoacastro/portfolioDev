@@ -7,57 +7,72 @@
     <title>João Castro</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="logo/JC_png.png">
+    <!--fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+    <!--icons-->
+    <script src="https://kit.fontawesome.com/7cafdbb60e.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
   <header> <!-- header: cabeçalho da página-->
-    <nav>
+    <nav class="superior">
       <ul> 
-        <li><a href="#top">Home</a></li>
-          <li><a href="#portfolio">Projetos</a></li>
-          <li><a href="https://github.com/joaoacastro" target="_blank">GitHub</a></li>
-          <li><a href="https://codepen.io/joaoacastro" target="_blank">CodePen</a></li>
-          <li><a href="https://www.linkedin.com/in/joao-ac-castro/" target="_blank">LinkedIn</a></li>
+
+        <li><a href="#portfolio">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
     <div class="titulo">
       <h1 class="site-title" id="index">João Antônio de Castro</h1>
       <h3 class="site-subtitle">< Web Developer Jr. ></h3>
-      <a href="http://instagram.com/jonnycastro" target="_blank" >
-        <img class="img-face" src="imagem/foto.jpg"></svg>
-      </a>
+      <a><img class="img-face" src="logo/JC_png.png"></a>
     </div>
   </header>
+  
+  <div class="botaoTop"><a href="#top"><i class="fas fa-chevron-up"></i></a></div>
+
   <section class="projetos">
-    
-    <h2 id="portfolio">< Projetos ></h2>
+    <h2 id="portfolio"><a>< Projetos ><hr></a></h2>
 
     <div class="grid">
       <figure>
         <a href="https://codepen.io/joaoacastro/pen/BaNgQbb?editors=0010" target="_blank">
         <img class="img-portfolio" src="imagem/IMC.png" alt="Calcular IMC">
-        <figcaption>Calcular IMC</figcaption>
-      </figure></a>
+        <figcaption>Calcular IMC</figcaption></a>
+      </figure>
   
       <figure>
         <a href="https://codepen.io/joaoacastro/pen/jObwPQm" target="_blank">
         <img class="img-portfolio" src="imagem/squares.jpg" alt="Color Squares">
-        <figcaption>Color Squares</figcaption>
-      </figure></a>
+        <figcaption>Color Squares</figcaption></a>
+      </figure>
   
       <figure>
         <a href="https://codepen.io/joaoacastro/pen/gOaaOYr" target="_blank">
         <img class="img-portfolio" src="imagem/sorteio.jpg" alt="App de Sorteio">
-        <figcaption>App de Sorteio</figcaption>
-      </figure></a>
+        <figcaption>App de Sorteio</figcaption></a>
+      </figure>
   
       <figure>
         <a href="https://codepen.io/joaoacastro/pen/JjYYMrb" target="_blank">
         <img class="img-portfolio" src="imagem/transporte.jfif" alt="App de Transporte">
-        <figcaption>App de Transporte</figcaption>
-      </figure></a>
+        <figcaption>App de Transporte</figcaption></a>
+      </figure>
+    </div>
+  </section>
 
+  <section class="contatos">
+    <h2 class="pag-title" id="contato"><a>< Contato ><hr></a></h2>
+
+    <div class="grid">
+      <a href="https://www.instagram.com/jonnycastro/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://codepen.io/joaoacastro/pens/popular" target="_blank"><i class="fab fa-codepen" alt="CodePen"></i></a>
+      <a href="https://github.com/joaoacastro" target="_blank"><i class="fab fa-github" alt="GitHub"></i></a>
+      <a href="https://www.linkedin.com/in/joao-ac-castro/" target="_blank"><i class="fab fa-linkedin" alt="LinkedIn"></i></a>
+      <a href="https://twitter.com/Jonny_Castro" target="_blank"><i class="fab fa-twitter-square" alt="Twitter"></i></a>
+      <a href="mailto:joaoaccastro@gmail.com"><i class="fas fa-mail-bulk" alt="e-Mail"></i></a>
     </div>
   </section>
   <script type="text/javascript" src="app.js"></script>
