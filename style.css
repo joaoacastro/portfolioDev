@@ -83,7 +83,7 @@ header{
 }
 
 .botaoTop {
-  background-color: rgb(53, 25, 59);
+  background-color: rgb(204, 204, 204);
   border-radius: 40px;
   position: fixed;
   right: 4%; /* para ele ficar fixo do lado direito da página */
@@ -91,10 +91,15 @@ header{
   width: 2em; /* A altura que vc quer o botão */
   padding: 10px; 
 }
-.botaoTop:hover{
-  background-color: rgba(255, 255, 255, 0.5);
+.botaoTop a{
+  color: white;
 }
-
+.botaoTop:hover{
+  background-color: rgba(71, 71, 71, 0.5);
+}
+.botaoTop a:hover{
+  color: rgb(0, 0, 0);
+}
 .titulo{
   transform: scale(0.2) translateY(50vh);
   opacity: 0;
@@ -179,6 +184,7 @@ header{
     grid-template-columns: repeat(2, 100px); /*fazer duas colunas de 100px*/
     justify-content: space-around;
   }
+  
 }
 @media (min-width: 600px){
   .projetos .grid{
