@@ -1,9 +1,9 @@
 /*reset do css*/
 *{
-    box-sizing: border-box;
-    font-family: 'Cabin', sans-serif;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cabin', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 body{
   background-image: url('https://i.stack.imgur.com/spmUM.gif');
@@ -12,15 +12,20 @@ body{
   background-color: black;/*linear-gradient( 0deg, rgba(0, 0, 0, 0), rgb(0, 0, 0));*/
   /*para tamanho poderiamos utilizar o vh q é o ViewportHeight e podemor usar para largura o vw, viewportWidth, ambos vão trabalhar com o tamanho da tela em uso.*/
 }
+/*barra lateral de rolagem*/
+body::-webkit-scrollbar {
+  width: 10px;
+} 
+
+body::-webkit-scrollbar-thumb {   
+  background-image:  linear-gradient( 180deg, rgba(255, 65, 100, 0.479), rgba(133, 133, 255, 0.5));
+}
+
 /*Se a tela tiver pelo menos 400px vai carregar estes estilos*/
 /*ou seja, apartir de 400px o site segue essa regra de estilo*/
 @media(min-width: 400px){/*os parenteses serve para colocar a condição do if dentro deles*/
   body{
     font-size: 14px;
-  }
-  .img-face{
-    height: 50%;
-    width: 50%;
   }
 }
 /*breakpoint*/
@@ -42,18 +47,10 @@ header{
   align-items: center;
 }
 .img-face{
-  border-radius: 80px;
-  filter: blur(2px);
   height: 30%;
   width: 30%;
 }
-.img-face:hover{
-  border-color: lightgray;
-  border-style: solid;
-  cursor: pointer;
-  filter: none;
-}
-nav{
+.superior{
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   background-image: linear-gradient( 80deg, rgba(255, 65, 100, 0.479), rgba(133, 133, 255, 0.5));
@@ -61,31 +58,68 @@ nav{
   position: fixed; /*fixar menu na pagina*/
   top: 0;
   width: 100vw;
+  z-index: 1;
 }
-nav a{
+.superior a{
   color: rgb(255, 255, 255);
   display: block;
   padding: 10px;
   text-decoration: none; /*tira o sublinhado que ja vem padrão*/
 }
-nav a:hover{
-  color:rgb(185, 185, 185);
+.superior a:hover{
+  color:rgb(0, 0, 0);
   text-decoration: underline;
   font-style: italic;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
+  transition: background-color 1s, border-radius 0.5s;
 }
-nav li{
+.superior li{
   list-style: none; /*tira a bolinha da lista que ja vem padrão*/
 }
-nav ul{
+.superior ul{
   display:flex; /*coloca a lista tudo em uma linha*/
   justify-content: space-around; /*coloca um espaçamento entre as listas, só funciona com o display:flex*/
 }
+
+.botaoTop {
+  background-color: rgb(53, 25, 59);
+  border-radius: 40px;
+  position: fixed;
+  right: 4%; /* para ele ficar fixo do lado direito da página */
+  top: 90%; /* vc pode colocar a porcentagem que quiser que ele fique longe do topo da pagina */
+  width: 2em; /* A altura que vc quer o botão */
+  padding: 10px; 
+}
+.botaoTop:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.titulo{
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+
+  animation: linear 2s animacaoTitulo forwards;
+}
+/*criando uma função de animacaoTitulo*/
+@keyframes animacaoTitulo {
+
+  /*inicio da animação, ao inves de 0% podemos utilizar o from*/0% {
+
+  }
+  /*fim da animação, ao inves de 100% podemos utilizar o to*/100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+  }
+}
+
 .site-title,
 .site-subtitle { /*usado para alterar mais de um grupo*/
-  color: lightgray;
-  font-family: monospace;
+  text-shadow: 0px 0px 20px rgb(0, 0, 0);
+  color: white;
+  font-family: 'Amaranth', sans-serif;
   text-align: center;
-  line-height: 2em; /*espaçamento entre linhas*/
+  line-height: 1.5; /*espaçamento entre linhas*/
 }
 .site-subtitle {
   border-style: solid;
@@ -95,36 +129,60 @@ nav ul{
   border-right-style: none;
   font-style: italic;
 }
-.projetos{
+.contatos{
+  background-image: linear-gradient( 0deg, rgba(134, 134, 134, 0.678), rgba(141, 141, 141, 0) ,rgba(0, 0, 0));
+}
+.projetos,
+.contatos {
   margin-top: 150px;
   font-family: 'Source Code Pro', monospace;
-  color: whitesmoke;
   text-align: center;
   height: 100vh;
 }
-.grid{
-  margin-top: 60px;
-  display: flex;
-  justify-content: center;
+.projetos a,
+.contatos a{
+  color: white;
+  text-decoration: none;
 }
-.projetos .grid{
+.projetos h2,
+.contatos h2{
+  color: white;
+  padding-top: 2em;
+}
+.contatos i{
+  font-size: 3em;
+}
+.projetos .grid,
+.contatos .grid{
   display: grid;
-  gap: 1em;
-  grid-template-columns:150px;
+  gap: 2em;
+  grid-template-columns:100px;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 60vh;
+}
+.grid{
+  border: 50px;
+  margin-top: 60px;
+  display: grid;
+  justify-content: center;
+}
+
+.contatos .grid a:hover{
+  text-shadow: 0px 0px 20px rgb(238, 255, 0, 1);
+  transition: text-shadow 0.5s;
 }
 
 @media (min-width: 400px){
-  .projetos .grid{
+  .projetos .grid,
+  .contatos .grid{
     grid-template-columns: repeat(2, 100px); /*fazer duas colunas de 100px*/
     justify-content: space-around;
   }
 }
 @media (min-width: 600px){
   .projetos .grid{
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(4, 100px);
     justify-content: space-around;
   }
 }
@@ -137,11 +195,15 @@ nav ul{
 .img-portfolio:hover{
   border-style: solid;
   border-color: white;
+  transform: scale(1.2); 
+  /*aumentar a imagem quando passar o mouse por cima, o numero entre parenteses é a quantidade de vezes da imagem*/
+  /*Conseguimos rotacionar a imagem usando em transform a ferramenta rotate(angulo)*/
+  transition: transform 0.5s; /*tempo da transição do transform*/
 }
 figcaption{
+  margin-top: 5px;
   color: white;
   font-family: 'Cabin', sans-serif;
-  margin-bottom: 30px;
 }
 figure{
   display: flex;
@@ -153,4 +215,5 @@ figure{
 /*rolagem suave com botão do menu*/
 html{
   scroll-behavior: smooth;
+  overflow: hidden;
 }
