@@ -257,5 +257,5 @@ figcaption{
 /*rolagem suave com botão do menu*/
 html{
   scroll-behavior: smooth;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
