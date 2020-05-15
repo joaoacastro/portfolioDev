@@ -17,11 +17,12 @@
 </head>
 <body>
   <header> <!-- header: cabeçalho da página-->
-    <nav class="superior">
+    <nav class="superior container">
       <ul> 
 
         <li><a href="#portfolio">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
+        <li><a href="#sobre">Sobre</a></li>
       </ul>
     </nav>
     <div class="titulo">
@@ -33,29 +34,29 @@
   
   <div class="botaoTop"><a href="#top"><i class="fas fa-chevron-up"></i></a></div>
 
-  <section class="projetos">
+  <section class="projetos container">
     <h2 id="portfolio"><a>< Projetos ><hr></a></h2>
 
-    <div class="grid">
-      <figure>
+    <div class="gridProjetos">
+      <figure class="figureProjetos">
         <a href="https://codepen.io/joaoacastro/pen/BaNgQbb?editors=0010" target="_blank">
         <img class="img-portfolio" src="imagem/IMC.png" alt="Calcular IMC">
         <figcaption>Calcular IMC</figcaption></a>
       </figure>
   
-      <figure>
+      <figure class="figureProjetos">
         <a href="https://codepen.io/joaoacastro/pen/jObwPQm" target="_blank">
         <img class="img-portfolio" src="imagem/squares.jpg" alt="Color Squares">
         <figcaption>Color Squares</figcaption></a>
       </figure>
   
-      <figure>
+      <figure class="figureProjetos">
         <a href="https://codepen.io/joaoacastro/pen/gOaaOYr" target="_blank">
         <img class="img-portfolio" src="imagem/sorteio.jpg" alt="App de Sorteio">
         <figcaption>App de Sorteio</figcaption></a>
       </figure>
   
-      <figure>
+      <figure class="figureProjetos">
         <a href="https://codepen.io/joaoacastro/pen/JjYYMrb" target="_blank">
         <img class="img-portfolio" src="imagem/transporte.jfif" alt="App de Transporte">
         <figcaption>App de Transporte</figcaption></a>
@@ -63,10 +64,10 @@
     </div>
   </section>
 
-  <section class="contatos">
+  <section class="contatos container">
     <h2 class="pag-title" id="contato"><a>< Contato ><hr></a></h2>
 
-    <div class="grid">
+    <div class="gridContatos">
       <a href="https://www.instagram.com/jonnycastro/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://codepen.io/joaoacastro/pens/popular" target="_blank"><i class="fab fa-codepen" alt="CodePen"></i></a>
       <a href="https://github.com/joaoacastro" target="_blank"><i class="fab fa-github" alt="GitHub"></i></a>
@@ -74,7 +75,35 @@
       <a href="https://twitter.com/Jonny_Castro" target="_blank"><i class="fab fa-twitter-square" alt="Twitter"></i></a>
       <a href="mailto:joaoaccastro@gmail.com"><i class="fas fa-mail-bulk" alt="e-Mail"></i></a>
     </div>
+    
   </section>
   <script type="text/javascript" src="app.js"></script>
+
+  <section class="sobre container">
+    <h2 id="sobre" class="sobreTitulo">Sobre<hr></h2>
+
+    <div class="gridSobre">
+      <figure class="figureSobre">
+        <img src="https://pbs.twimg.com/profile_images/1180893238795878401/dzAsz-gD_400x400.jpg" alt="João Antônio de Castro">
+      </figure>
+      <br>
+      <div class="paragrafoSobre">
+        <p>
+          Olá, tudo bem? Me chamo João Antônio, mas todos me chamam de Jonny, tenho 29 anos, sou formado em Produção Audiovisual e apaixonado por programação. Apesar do ambiente familiar, a minha escolha profissional não foi tão fácil, tentei cursar Ciências da Computação, porém não obtive sucesso em algumas matérias e acabei deixando programação de lado por um momento, mas sempre, tendo algum tipo de contato com a área, até que no fim de 2019, me peguei pensando já que eu gosto da área por que não voltar para programação, então voltei a estudar desenvolvimento web, praticar e realmente percebi que essa é minha vocação.
+        </p>
+        <br>
+        <p>
+          Esse site foi construído utilizando linguagens como Javascript, HTML5 e CSS3 durante a <a href="https://www.alura.com.br/imersao-css" target="_blank">Imersão CSS da Alura </a>😉
+        </p>
+        <br>
+        <p>
+          Gostaria de aproveitar o espaço e agradecer à todos os envolvidos e responsáveis por este curso, principalmente ao 
+          <a href="https://twitter.com/paulo_caelum" target="_blank">Paulo Silveira</a>, a 
+          <a href="https://twitter.com/vanessametonini" target="_blank">Vanessa Tonini</a>  e a  
+          <a href="https://twitter.com/aquijuz" target="_blank">Juliana Amoasei</a>.
+        </p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
