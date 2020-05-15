@@ -161,9 +161,10 @@ header{
   margin: 2em;
 }
 
-@media (max-width: 400px){
+@media (max-width: 500px){
   .figureSobre img{
     clip-path: polygon(0% 0%, 100% 0, 100% 81%, 50% 100%, 0 85%);
+    float: none;
   }
 }
 
