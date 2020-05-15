@@ -6,17 +6,16 @@
   padding: 0;
 }
 body{
-  background-image: url('https://i.stack.imgur.com/spmUM.gif');
-  background-size: auto 130vh; /*largura e altura*/
-  background-repeat: no-repeat;
   background-color: black;/*linear-gradient( 0deg, rgba(0, 0, 0, 0), rgb(0, 0, 0));*/
+  background-image: url('https://i.stack.imgur.com/spmUM.gif');
+  background-repeat: no-repeat;
+  background-size: auto 130vh; /*largura e altura*/
   /*para tamanho poderiamos utilizar o vh q é o ViewportHeight e podemor usar para largura o vw, viewportWidth, ambos vão trabalhar com o tamanho da tela em uso.*/
 }
 /*barra lateral de rolagem*/
 body::-webkit-scrollbar {
   width: 10px;
 } 
-
 body::-webkit-scrollbar-thumb {   
   background-image:  linear-gradient( 180deg, rgba(255, 65, 100, 0.479), rgba(133, 133, 255, 0.5));
 }
@@ -35,25 +34,25 @@ body::-webkit-scrollbar-thumb {
   }
 }
 header{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
 }
 .titulo a{
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .img-face{
   height: 30%;
   width: 30%;
 }
 .superior{
+  background-image: linear-gradient( 80deg, rgba(255, 65, 100, 0.479), rgba(133, 133, 255, 0.5));
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  background-image: linear-gradient( 80deg, rgba(255, 65, 100, 0.479), rgba(133, 133, 255, 0.5));
   color: whitesmoke;
   position: fixed; /*fixar menu na pagina*/
   top: 0;
@@ -68,10 +67,10 @@ header{
 }
 .superior a:hover{
   color:rgb(0, 0, 0);
-  text-decoration: underline;
-  font-style: italic;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 40px;
+  font-style: italic;
+  text-decoration: underline;
   transition: background-color 1s, border-radius 0.5s;
 }
 .superior li{
@@ -85,11 +84,11 @@ header{
 .botaoTop {
   background-color: rgb(204, 204, 204);
   border-radius: 40px;
+  padding: 10px; 
   position: fixed;
   right: 4%; /* para ele ficar fixo do lado direito da página */
   top: 90%; /* vc pode colocar a porcentagem que quiser que ele fique longe do topo da pagina */
   width: 2em; /* A altura que vc quer o botão */
-  padding: 10px; 
 }
 .botaoTop a{
   color: white;
@@ -101,11 +100,11 @@ header{
   color: rgb(0, 0, 0);
 }
 .titulo{
+  animation: linear 2s animacaoTitulo forwards;
   transform: scale(0.2) translateY(50vh);
   opacity: 0;
-
-  animation: linear 2s animacaoTitulo forwards;
 }
+
 /*criando uma função de animacaoTitulo*/
 @keyframes animacaoTitulo {
 
@@ -120,106 +119,143 @@ header{
 
 .site-title,
 .site-subtitle { /*usado para alterar mais de um grupo*/
-  text-shadow: 0px 0px 20px rgb(0, 0, 0);
   color: white;
   font-family: 'Amaranth', sans-serif;
-  text-align: center;
   line-height: 1.5; /*espaçamento entre linhas*/
+  text-align: center;
+  text-shadow: 0px 0px 20px rgb(0, 0, 0);
 }
 .site-subtitle {
   border-style: solid;
-  border-top-width: 5px;
   border-bottom-style: none;
   border-left-style: none;
   border-right-style: none;
+  border-top-width: 5px;
   font-style: italic;
 }
-.contatos{
-  background-image: linear-gradient( 0deg, rgba(134, 134, 134, 0.678), rgba(141, 141, 141, 0) ,rgba(0, 0, 0));
-}
-.projetos,
-.contatos {
-  margin-top: 150px;
+.sobre h2{
+  /*background-image: linear-gradient( 0deg, rgba(134, 134, 134, 0.678), rgba(141, 141, 141, 0) ,rgba(0, 0, 0));*/
+  color: white;
   font-family: 'Source Code Pro', monospace;
   text-align: center;
-  height: 100vh;
 }
-.projetos a,
-.contatos a{
+.sobre p{
   color: white;
+  margin-bottom: 1.5em;
+  text-align: justify; /*deixar texto justificado*/
+  text-indent: 1em ;/*recuo do texto*/
+}
+@media(min-width: 1200px){
+  .container{
+    margin-left: auto;
+    margin-right: auto; /*só funciona para o eixo horizontal*/
+    max-width: 1200px;
+  }
+}
+.figureSobre img{ /*Imagem na guia sobre*/
+  border-radius: 20px;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); /*cortar com base em algo, basicamente como uma mascara*/
+  /*para fazear um polygon pode-se utilizar o site: https://bennettfeely.com/clippy/*/
+  float: left; /*para colocar foto no meio dos textos*/
+  height: 250px;
+  margin: 2em;
+}
+
+@media (max-width: 400px){
+  .figureSobre img{
+    clip-path: polygon(0% 0%, 100% 0, 100% 81%, 50% 100%, 0 85%);
+  }
+}
+
+.paragrafoSobre{
+  margin-top: 1em;
+}
+.sobre,
+.projetos,
+.contatos{
+  font-family: 'Source Code Pro', monospace;
+  min-height: 100vh;
+  padding: 2em;
+  text-align: center;
+}
+
+.projetos a,
+.contatos a,
+.sobre a{
+  color: white;
+  font-style: italic;
   text-decoration: none;
 }
 .projetos h2,
-.contatos h2{
+.contatos h2,
+.sobre h2{
   color: white;
   padding-top: 2em;
 }
+
 .contatos i{
   font-size: 3em;
 }
-.projetos .grid,
-.contatos .grid{
-  display: grid;
-  gap: 2em;
-  grid-template-columns:100px;
+.gridSobre{
+  margin-top: 100px;
+}
+.gridContatos{
+  margin-top: 100px;
+}
+.gridProjetos,
+.gridContatos{
   align-items: center;
-  justify-content: center;
-  height: 60vh;
-}
-.grid{
-  border: 50px;
-  margin-top: 60px;
   display: grid;
+  grid-template-columns:100px;
+  height: 60vh;
   justify-content: center;
 }
-
-.contatos .grid a:hover{
+.gridContatos a:hover{
   text-shadow: 0px 0px 20px rgb(238, 255, 0, 1);
   transition: text-shadow 0.5s;
 }
 
 @media (min-width: 400px){
-  .projetos .grid,
-  .contatos .grid{
+  .gridProjetos,
+  .gridContatos{
     grid-template-columns: repeat(2, 100px); /*fazer duas colunas de 100px*/
     justify-content: space-around;
   }
-  
 }
 @media (min-width: 600px){
-  .projetos .grid{
+  .gridProjetos{
     grid-template-columns: repeat(4, 100px);
     justify-content: space-around;
   }
 }
 .img-portfolio{
-  height: 110px;
-  width: 130px;
   border-radius: 40px;
+  height: 110px;
   object-fit: cover;
+  width: 130px;
 }
 .img-portfolio:hover{
-  border-style: solid;
   border-color: white;
+  border-style: solid;
   transform: scale(1.2); 
   /*aumentar a imagem quando passar o mouse por cima, o numero entre parenteses é a quantidade de vezes da imagem*/
   /*Conseguimos rotacionar a imagem usando em transform a ferramenta rotate(angulo)*/
   transition: transform 0.5s; /*tempo da transição do transform*/
 }
 figcaption{
-  margin-top: 5px;
   color: white;
   font-family: 'Cabin', sans-serif;
+  margin-top: 5px;
 }
-figure{
+.figureProjetos{
   display: flex;
   text-align: center;
 }
-.grid a{
+.gridProjetos a{
   text-decoration: none;
 }
 /*rolagem suave com botão do menu*/
 html{
   scroll-behavior: smooth;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
