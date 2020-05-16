@@ -138,6 +138,7 @@ header{
   color: white;
   font-family: 'Source Code Pro', monospace;
   text-align: center;
+  font-style: italic;
 }
 .sobre p{
   color: white;
@@ -145,7 +146,7 @@ header{
   text-align: justify; /*deixar texto justificado*/
   text-indent: 1em ;/*recuo do texto*/
 }
-@media(min-width: 1200px){
+@media (min-width: 1200px){
   .container{
     margin-left: auto;
     margin-right: auto; /*só funciona para o eixo horizontal*/
@@ -163,6 +164,8 @@ header{
 
 @media (max-width: 500px){
   .figureSobre img{
+    height: 150px;
+    margin: 0;
     clip-path: polygon(0% 0%, 100% 0, 100% 81%, 50% 100%, 0 85%);
     float: none;
   }
@@ -201,7 +204,8 @@ header{
   margin-top: 2em;
 }
 .gridContatos{
-  margin-top: 100px;
+  margin-top: 4em;
+  
 }
 .gridProjetos,
 .gridContatos{
@@ -216,12 +220,13 @@ header{
   transition: text-shadow 0.5s;
 }
 
-@media (min-width: 400px){
+@media (min-width: 500px){
   .gridProjetos,
   .gridContatos{
     grid-template-columns: repeat(2, 100px); /*fazer duas colunas de 100px*/
     justify-content: space-around;
   }
+
 }
 @media (min-width: 600px){
   .gridProjetos{
@@ -234,6 +239,15 @@ header{
   height: 110px;
   object-fit: cover;
   width: 130px;
+}
+@media (max-width: 500px){
+  .img-portfolio{
+    margin-top: 2em;
+    border-radius: 50px;
+    object-fit: cover;
+    height: 55px;
+    width: 65px;
+  }
 }
 .img-portfolio:hover{
   border-color: white;
@@ -258,5 +272,5 @@ figcaption{
 /*rolagem suave com botão do menu*/
 html{
   scroll-behavior: smooth;
-  overflow: hidden;
+  /*overflow: hidden;*/ /*tirar barra de rolagem*/
 }
